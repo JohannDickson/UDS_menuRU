@@ -1,0 +1,20 @@
+This project aims to fetch the week's menu for the CROUS University Restaurants and export it in iCal format.
+
+There is simply a python script to launch (menuRU.py), it currently gets the menu for the Université de Savoie restaurant "La Chautagne" at Bourget-du-Lac, but it is quite easy to modify the code for it to work with another restaurant.
+
+For the script to work, you will need the following libraries:
+feedparser: http://pypi.python.org/pypi/feedparser/
+icalendar: http://pypi.python.org/pypi/icalendar/
+pytz: http://pypi.python.org/pypi/pytz/
+
+------------------
+
+Le but de ce projet est de récupérer le menu de la semaine pour les Restaurants Universitaires CROUS et de l'exporter au format iCal.
+
+Il y a simplement un script python à lancer (menuRU.py), actuellement il ne récupère que le menu pour le restaurant de l'Université de Savoie "La Chautagne" au Bourget-du-Lac, il est cependant assez facile de modifier le code pour fonctionner avec un autre restaurant.
+
+Pour que le script fonctionne, il vous faudra les bibliothèques suivantes:
+feedparser: http://pypi.python.org/pypi/feedparser/
+icalendar: http://pypi.python.org/pypi/icalendar/
+pytz: http://pypi.python.org/pypi/pytz/
+
