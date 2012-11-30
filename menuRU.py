@@ -1,7 +1,7 @@
 # Requires feedparser, icalendar, pytz
 
 import feedparser
-import pytz
+from pytz import timezone
 from icalendar import Calendar, Event
 from datetime import datetime
 
@@ -26,12 +26,12 @@ for item in menuRSS["entries"]:
     if not ((jour=="Vendredi" and service=="soir") or jour=="Samedi" or jour=="Dimanche"):
         if service == "midi":
             ev.add('summary', 'menu RU')
-            ev.add('dtstart', datetime(date.year,date.month,date.day,11,30,0,tzinfo=pytz.timezone("Europe/Paris")))
-            ev.add('dtend', datetime(date.year,date.month,date.day,13,0,0,tzinfo=pytz.timezone("Europe/Paris")))
+            ev.add('dtstart', datetime(date.year,date.month,date.day,11,30,0,tzinfo=timezone("Europe/Paris")))
+            ev.add('dtend', datetime(date.year,date.month,date.day,13,0,0,tzinfo=timezone("Europe/Paris")))
         elif service == "soir":
             ev.add('summary', 'menu RU')
-            ev.add('dtstart', datetime(date.year,date.month,date.day,19,15,0,tzinfo=pytz.timezone("Europe/Paris")))
-            ev.add('dtend', datetime(date.year,date.month,date.day,20,0,0,tzinfo=pytz.timezone("Europe/Paris")))
+            ev.add('dtstart', datetime(date.year,date.month,date.day,19,15,0,tzinfo=timezone("Europe/Paris")))
+            ev.add('dtend', datetime(date.year,date.month,date.day,20,0,0,tzinfo=timezone("Europe/Paris")))
 
         ev.add('description', item["summary_detail"]["value"])
         cal.add_component(ev)
