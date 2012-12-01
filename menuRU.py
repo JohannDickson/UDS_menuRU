@@ -24,12 +24,11 @@ for item in menuRSS["entries"]:
     ev = Event()
 
     if not ((jour=="Vendredi" and service=="soir") or jour=="Samedi" or jour=="Dimanche"):
+        ev.add('summary', 'menu RU')
         if service == "midi":
-            ev.add('summary', 'menu RU')
             ev.add('dtstart', datetime(date.year,date.month,date.day,11,30,0,tzinfo=timezone("Europe/Paris")))
             ev.add('dtend', datetime(date.year,date.month,date.day,13,0,0,tzinfo=timezone("Europe/Paris")))
         elif service == "soir":
-            ev.add('summary', 'menu RU')
             ev.add('dtstart', datetime(date.year,date.month,date.day,19,15,0,tzinfo=timezone("Europe/Paris")))
             ev.add('dtend', datetime(date.year,date.month,date.day,20,0,0,tzinfo=timezone("Europe/Paris")))
 
