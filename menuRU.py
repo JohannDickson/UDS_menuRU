@@ -29,7 +29,7 @@ for item in menuRSS["entries"]:
             ev.add('dtstart', datetime(date.year,date.month,date.day,11,30,0,tzinfo=timezone("Europe/Paris")))
             ev.add('dtend', datetime(date.year,date.month,date.day,13,0,0,tzinfo=timezone("Europe/Paris")))
         elif service == "soir":
-            ev.add('dtstart', datetime(date.year,date.month,date.day,19,15,0,tzinfo=timezone("Europe/Paris")))
+            ev.add('dtstart', datetime(date.year,date.month,date.day,18,30,0,tzinfo=timezone("Europe/Paris")))
             ev.add('dtend', datetime(date.year,date.month,date.day,20,0,0,tzinfo=timezone("Europe/Paris")))
 
         ev.add('description', item["summary_detail"]["value"])
