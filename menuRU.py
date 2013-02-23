@@ -1,9 +1,20 @@
+#! /usr/bin/env python
+
 # Requires feedparser, icalendar, pytz
 
-import feedparser
-from pytz import timezone
-from icalendar import Calendar, Event
+import sys
 from datetime import datetime
+try:
+    import feedparser
+    from pytz import timezone
+    from icalendar import Calendar, Event
+except:
+    print "Please make sure you have installed the following modules:"
+    print "Feedparser \t http://pypi.python.org/pypi/feedparser/"
+    print "Pytz \t\t http://pypi.python.org/pypi/pytz/"
+    print "iCalendar \t http://pypi.python.org/pypi/icalendar/"
+    raise
+    sys.exit(0)
 
 calName = "calendars/menuRU.ics"
 print "Exporting calendar: "+calName
