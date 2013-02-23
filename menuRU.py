@@ -16,10 +16,10 @@ except:
     raise
     sys.exit(0)
 
-def makeCal(outputFile, feed):
+def makeCal(outputFile, inputFeed):
     cal = Calendar()
 
-    menuRSS = feedparser.parse(feed)
+    menuRSS = feedparser.parse(inputFeed)
     for item in menuRSS["entries"]:
         title = item["title_detail"]["value"].split()
         jour = title[0]
