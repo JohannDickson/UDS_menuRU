@@ -45,12 +45,12 @@ def makeCal(outputFile, inputFeed):
     f.write(cal.to_ical())
     f.close()
 
-    print "Done!"
 
 if __name__=='__main__':
     calName = "calendars/menuRU.ics"
-    print "Exporting calendar: "+calName
     # CROUS restaurants: http://www.crous-grenoble.fr/article-27-mg-3-mh-25-ms-1-menu-de-la-semaine.htm
     chautagne = "http://www.crous-grenoble.fr/rss-menu-7.htm"
 
+    print "Exporting calendar: "+calName
     makeCal(calName, chautagne)
+    print "Done!"
