@@ -25,7 +25,7 @@ def makeCal(outputFile, inputFeed):
         jour = title[0]
         service = title[1]
         date = datetime.strptime(title[2], "%d/%m/%Y")
-        item["summary_detail"]["value"] = item["summary_detail"]["value"].replace('<br />\n', '\\n')
+        item["summary_detail"]["value"] = item["summary_detail"]["value"].replace('<br />\n', '\n')
 
         ev = Event()
 
