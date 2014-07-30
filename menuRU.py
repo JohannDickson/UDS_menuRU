@@ -14,7 +14,7 @@ except:
     print "Pytz \t\t http://pypi.python.org/pypi/pytz/"
     print "iCalendar \t http://pypi.python.org/pypi/icalendar/"
     raise
-    sys.exit(0)
+    sys.exit(1)
 
 def makeCal(outputFile, inputFeed):
     cal = Calendar()
@@ -54,3 +54,4 @@ if __name__=='__main__':
     print "Exporting calendar: "+calName
     makeCal(calName, chautagne)
     print "Done!"
+    sys.exit(0)
