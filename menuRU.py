@@ -25,7 +25,7 @@ def makeCal(outputFile, inputFeed):
         jour = title[0]
         service = title[1]
         date = datetime.strptime(title[2], "%d/%m/%Y")
-        item["summary_detail"]["value"] = item["summary_detail"]["value"].replace('<br />\n', '\n')
+        description = item["summary_detail"]["value"].replace('<br />', '')
 
         ev = Event()
 
@@ -38,7 +38,7 @@ def makeCal(outputFile, inputFeed):
                 ev.add('dtstart', datetime(date.year,date.month,date.day,18,30,0,tzinfo=timezone("Europe/Paris")))
                 ev.add('dtend', datetime(date.year,date.month,date.day,20,0,0,tzinfo=timezone("Europe/Paris")))
 
-            ev.add('description', item["summary_detail"]["value"])
+            ev.add('description', description)
             cal.add_component(ev)
 
     f = open(outputFile, 'wb')
