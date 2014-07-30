@@ -48,8 +48,8 @@ def makeCal(outputFile, inputFeed):
 
 if __name__=='__main__':
     calName = "calendars/menuRU.ics"
-    # CROUS restaurants: http://www.crous-grenoble.fr/article-27-mg-3-mh-25-ms-1-menu-de-la-semaine.htm
-    chautagne = "http://www.crous-grenoble.fr/rss-menu-7.htm"
+    # CROUS restaurants: http://appli.crous-grenoble.fr/article-27-mg-3-mh-25-ms-1-menu-de-la-semaine.htm
+    chautagne = "http://appli.crous-grenoble.fr/rss-menu-7.htm"
 
     print "Exporting calendar: "+calName
     makeCal(calName, chautagne)
